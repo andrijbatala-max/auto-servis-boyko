@@ -533,6 +533,76 @@ body {
     margin-bottom: 32px;
 }
 
+/* Contact Info Section */
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: var(--dark-gray);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: rgba(255, 215, 0, 0.3);
+    transform: translateX(4px);
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.contact-content {
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin-bottom: 4px;
+}
+
+.contact-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-value:hover {
+    color: var(--gold);
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Legacy form styles (kept for compatibility) */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -782,6 +852,23 @@ body {
     
     .map-buttons {
         grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        padding: 16px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
     }
     
     .footer-grid {
