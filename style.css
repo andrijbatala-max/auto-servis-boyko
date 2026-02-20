@@ -187,6 +187,12 @@ body {
     border: none;
     color: var(--white);
     cursor: pointer;
+    margin-left: 8px;
+}
+
+/* Ensure language switcher is visible */
+.nav-container {
+    position: relative;
 }
 
 /* Hero Section */
@@ -913,4 +919,43 @@ body {
 ::selection {
     background: var(--gold);
     color: var(--black);
+}
+
+/* Language Switcher */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: var(--gold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lang-switch:hover {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: var(--gold);
+}
+
+.lang-switch svg {
+    stroke: var(--gold);
+    flex-shrink: 0;
+}
+
+/* Mobile language switcher */
+@media (max-width: 768px) {
+    .lang-switch {
+        padding: 6px 10px;
+        margin-right: 8px;
+    }
+
+    .lang-switch span {
+        display: none;
+    }
 }
